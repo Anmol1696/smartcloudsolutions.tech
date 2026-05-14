@@ -10,40 +10,40 @@ export const offers: Offer[] = [
   {
     title: "Agent systems",
     summary:
-      "Production agent workflows need auth, state, tools, retries, and observability. We build the control plane around the model, not another prompt demo.",
+      "For teams moving past demos into agents that touch customer data, internal tools, and long-running jobs.",
     deliverables: [
-      "MCP servers and tool gateways",
-      "Workspace isolation and credential boundaries",
-      "Evaluation, tracing, and replay loops",
+      "MCP servers with typed tools and audit trails",
+      "Workspace isolation, auth, and credential boundaries",
+      "Tracing, replay, and eval loops for failed runs",
     ],
     whenToCall:
-      "You have agents touching real customer data, internal tools, or long-running work.",
+      "Your agent can do useful work, but nobody trusts the permissions, retries, or failure modes yet.",
     proof: "MCP layers, vLLM inference, OPA policy, Postgres RLS",
   },
   {
     title: "Infrastructure platforms",
     summary:
-      "Kubernetes operators, devnets, CI environments, runbooks, and cloud foundations for teams that need the platform to keep explaining itself.",
+      "For teams whose platform depends on tribal setup knowledge, manual environments, and one overloaded infra owner.",
     deliverables: [
-      "Kubernetes operators and CRDs",
-      "Preview and integration environments",
-      "Dashboards, alerts, and runbooks",
+      "Kubernetes operators, CRDs, and control loops",
+      "Preview environments and CI-grade devnets",
+      "Dashboards, alerts, and runbooks teams actually use",
     ],
     whenToCall:
-      "Your infra depends on tribal knowledge, manual setup, or one overloaded platform engineer.",
+      "Every release still needs a human checklist, a local incantation, or a platform engineer on standby.",
     proof: "Starship, KubernetesJS, Rakuten, Persistence, Woven Planet",
   },
   {
     title: "Web3 and dev tooling",
     summary:
-      "Typed SDKs, schema-first CLIs, staking services, devnets, and protocol tooling for teams shipping across Cosmos, Ethereum, and Solana.",
+      "For protocol teams blocked by brittle SDKs, validator workflows, schema drift, or test environments nobody can reproduce.",
     deliverables: [
       "SDKs generated from source-of-truth schemas",
-      "Protocol services and validator workflows",
-      "CI-grade chain and relayer environments",
+      "Protocol services and validator operation flows",
+      "Chain, relayer, and staking environments for CI",
     ],
     whenToCall:
-      "Your protocol is blocked by tooling, integration drift, or brittle local environments.",
+      "Your protocol works, but integrations keep drifting because the tools are weaker than the core system.",
     proof: "Cosmos SDK, IBC, SSV, Foundry, Solana, OpenAPI",
   },
 ];

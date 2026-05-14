@@ -16,7 +16,7 @@ export function ProjectCard({ project }: { project: Project }) {
       rel="noopener noreferrer"
       className="group block border-b border-border bg-card transition-[background-color] duration-150 last:border-b-0 hover:bg-background"
     >
-      <div className="grid gap-6 p-5 md:grid-cols-[0.8fr_1.35fr_1fr_auto] md:items-start md:p-6">
+      <div className="grid gap-5 p-5 md:grid-cols-[0.78fr_1.42fr_0.98fr_auto] md:items-start md:p-6">
         <div>
           <div className="text-xs font-semibold uppercase tracking-[0.12em] text-subtle-foreground">
             {project.type}
@@ -48,7 +48,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
 
-        <div className="rounded-xl border border-border bg-background p-4">
+        <div className="border-t border-border pt-4 md:border-l md:border-t-0 md:pl-5 md:pt-0">
           <div className="flex items-center justify-between gap-3">
             <span className="text-xs font-semibold uppercase tracking-[0.12em] text-subtle-foreground">
               {project.artifact.label}

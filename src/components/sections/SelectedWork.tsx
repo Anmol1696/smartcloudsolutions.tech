@@ -5,12 +5,12 @@ import { projects } from "@/content/projects";
 
 export function SelectedWork() {
   return (
-    <section id="work" className="scroll-mt-16 py-16 md:py-20">
+    <section id="work" className="scroll-mt-16 py-14 md:py-16">
       <Container>
         <SectionHeader
           eyebrow="Selected Work"
           title="Proof before pitch."
-          kicker="Public artifacts from the same kind of work we do for teams: environments, SDKs, protocol services, and agent-native platform modules."
+          kicker="Public artifacts from the same work pattern we bring into client teams: environments, SDKs, protocol services, and agent-native platform modules."
         />
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card">

@@ -27,11 +27,11 @@ export function SectionHeader({
       )}
     >
       <Eyebrow>{eyebrow}</Eyebrow>
-      <Heading className="text-balance text-3xl font-semibold leading-[1.05] text-foreground md:text-5xl">
+      <Heading className="text-balance text-3xl font-semibold leading-[1.08] text-foreground md:text-4xl">
         {title}
       </Heading>
       {kicker ? (
-        <p className="max-w-2xl text-pretty text-base leading-7 text-muted-foreground md:text-lg">
+        <p className="max-w-2xl text-pretty text-base leading-7 text-muted-foreground">
           {kicker}
         </p>
       ) : null}
