@@ -38,45 +38,45 @@ const phases: Phase[] = [
 
 export function Engagement() {
   return (
-    <section id="engagement" className="scroll-mt-16 py-16 md:py-20">
+    <section id="engagement" className="scroll-mt-16 py-14 md:py-16">
       <Container>
         <SectionHeader
           eyebrow="Engagement"
-          title="A working model, not a vibe."
-          kicker="We avoid open-ended consulting. Every phase ends in something your team can inspect, run, or reject."
+          title="A build cadence your team can inspect."
+          kicker="No open-ended consulting loop. Each phase has a short horizon, a named artifact, and a clear decision point before the next spend."
         />
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-9 overflow-hidden rounded-xl border border-border bg-card">
           {phases.map((phase, index) => (
-            <div
+            <article
               key={phase.title}
-              className="rounded-xl border border-border bg-card p-5"
+              className="grid gap-5 border-b border-border px-5 py-6 last:border-b-0 md:grid-cols-[0.48fr_1fr_1fr] md:gap-8"
             >
-              <div className="flex items-center justify-between gap-4">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft font-mono text-xs font-semibold text-accent">
-                  {index + 1}
+              <div>
+                <span className="font-mono text-xs font-semibold text-accent">
+                  0{index + 1}
                 </span>
-                <span className="text-xs font-medium text-muted-foreground">
+                <h3 className="mt-3 text-xl font-semibold leading-tight text-foreground">
+                  {phase.title}
+                </h3>
+                <span className="mt-2 block text-sm text-muted-foreground">
                   {phase.duration}
                 </span>
               </div>
 
-              <h3 className="mt-5 text-xl font-semibold leading-tight text-foreground">
-                {phase.title}
-              </h3>
-
-              <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              <p className="max-w-prose text-sm leading-6 text-muted-foreground">
                 {phase.outcome}
               </p>
 
-              <ul className="mt-5 space-y-2 border-t border-border pt-4">
+              <ul className="grid gap-2 text-sm text-foreground sm:grid-cols-3 md:grid-cols-1">
                 {phase.deliverables.map((item) => (
-                  <li key={item} className="text-sm text-foreground">
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
       </Container>

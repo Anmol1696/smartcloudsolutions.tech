@@ -5,7 +5,7 @@ import { operators } from "@/content/operators";
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-16 border-t border-border bg-card py-16 md:py-20">
+    <section id="about" className="scroll-mt-16 border-t border-border bg-card py-14 md:py-16">
       <Container>
         <SectionHeader
           eyebrow="About"
@@ -13,7 +13,7 @@ export function About() {
           kicker="No junior bench, no anonymous delivery team. You work with the people writing the commits and holding the operational context."
         />
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-2">
+        <div className="mt-9 overflow-hidden rounded-xl border border-border bg-background">
           {operators.map((op) => (
             <OperatorCard key={op.slug} operator={op} />
           ))}
