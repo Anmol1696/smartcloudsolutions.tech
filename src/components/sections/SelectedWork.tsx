@@ -9,8 +9,8 @@ export function SelectedWork() {
       <Container>
         <SectionHeader
           eyebrow="Selected Work"
-          title="Proof before pitch."
-          kicker="Public artifacts from the same work pattern we bring into client teams: environments, SDKs, protocol services, and agent-native platform modules."
+          title="Public proof, not pitch."
+          kicker="The same work pattern we bring into client teams: environments, SDKs, protocol services, and agent-native platform modules."
         />
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card">
