@@ -8,7 +8,7 @@ export const site = {
   tagline:
     "Agent systems, infrastructure platforms, and web3 tooling from senior engineers who run what they build.",
   email: "hello@smartcloudsolutions.tech",
-  bookingUrl: "https://cal.com/smartcloud-lab/intro",
+  bookingUrl: "https://cal.com/smartcloud-lab/30min",
   location: "Dubai · GMT+4",
   github: {
     anmol: "https://github.com/Anmol1696",

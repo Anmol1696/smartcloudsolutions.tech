@@ -14,7 +14,7 @@ const details: Detail[] = [
   { label: "Email", value: site.email, href: `mailto:${site.email}` },
   {
     label: "Booking",
-    value: "cal.com/smartcloud-lab",
+    value: "cal.com/smartcloud-lab/30min",
     href: site.bookingUrl,
   },
   {
