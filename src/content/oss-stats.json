@@ -1,0 +1,34 @@
+{
+  "snapshotDate": "2026-05-12",
+  "tiles": [
+    {
+      "value": "2.1k+",
+      "label": "commits across flagship oss",
+      "raw": 2100,
+      "format": "k+"
+    },
+    {
+      "value": "4",
+      "label": "ecosystems shipped to",
+      "raw": 4,
+      "note": "cosmos · ethereum · solana · base"
+    },
+    {
+      "value": "7+",
+      "label": "protocols in production",
+      "raw": 7
+    },
+    {
+      "value": "10+",
+      "label": "years on-call between us",
+      "raw": 10,
+      "format": "y+"
+    },
+    {
+      "value": "×2",
+      "label": "iit bombay alumni",
+      "raw": 2,
+      "format": "×"
+    }
+  ]
+}
