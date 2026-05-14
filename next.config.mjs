@@ -1,16 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    assetPrefix: '/',
-    basePath: '',
-    trailingSlash: true,
-    reactStrictMode: true,
-    images: {
-        domains: ['raw.githubusercontent.com'], // Add any external domains if needed
-    },
-    env: {
-        CUSTOM_KEY: 'value', // Example environment variable
-    },
-    output: 'export' // Enable static export
+  output: "export",
+  trailingSlash: true,
+  reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

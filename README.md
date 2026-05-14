@@ -1,38 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SmartCloud - smartcloudsolutions.tech
 
-https://smartcloudsolutions.tech
+Product-lab landing page for **Smart Cloud Solutions FZ-LLC**. Built as a
+Next.js static export, deployed to GitHub Pages.
 
-## Getting Started
+Live: <https://smartcloudsolutions.tech>
 
-First, run the development server:
+## Stack
+
+- **Framework:** Next.js 14 (App Router) — `output: 'export'`
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 3 + shadcn/ui (button, badge, separator, tooltip)
+- **Fonts:** Geist Sans + Geist Mono
+- **Icons:** lucide-react
+- **Hosting:** GitHub Pages → CNAME `smartcloudsolutions.tech`
+
+The visual direction (Product Lab, near-white tokens, sparse cool accent, proof
+artifacts) and brand voice are documented in [`brand.md`](./brand.md). Treat
+that file as the source of truth for any color, type, or copy decision.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000, or pass -- -p 4040
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Useful scripts:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build      # static export to ./out
+npm run lint       # next lint
+npm run typecheck  # tsc --noEmit
+node scripts/generate-og.mjs   # regenerate public/og.png from public/og.svg
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Repository layout
 
-## Learn More
+```
+src/
+├── app/
+│   ├── layout.tsx       # fonts, metadata, skip-link
+│   ├── page.tsx         # section composition only
+│   └── globals.css      # tokens + base styles + reduced-motion guard
+├── components/
+│   ├── ui/              # shadcn primitives
+│   ├── sections/        # Hero, Capabilities, SelectedWork, etc.
+│   └── …                # layout primitives (Container, Nav, SiteFooter, Wordmark, …)
+├── content/             # all copy lives here — edit without touching JSX
+│   ├── pillars.ts       # the three buyer-facing offers
+│   ├── projects.ts      # case-study rows + artifact metadata
+│   ├── oss-stats.json   # proof bar
+│   └── operators.ts     # About — Anmol + Rohit
+└── lib/
+    ├── site.ts          # site-level constants (urls, email, booking)
+    └── utils.ts         # cn() helper
+```
 
-To learn more about Next.js, take a look at the following resources:
+To change copy, edit the file in `src/content/`. To change visual direction,
+edit `brand.md` and `src/app/globals.css` together. To add a section, drop a
+component into `src/components/sections/` and reference it from `page.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`.github/workflows/deploy.yaml` runs on every push to `main`:
 
-## Deploy on Vercel
+1. `npm ci`
+2. `npm run typecheck`
+3. `npm run lint`
+4. `npm run build`
+5. writes `CNAME` and `.nojekyll` into `./out`
+6. publishes to the `gh-pages` branch via `peaceiris/actions-gh-pages`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site is static — no API routes, no SSR, no middleware. Everything that
+needs a server (booking, contact form) lives off-site (Cal.com, `mailto:`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Known follow-ups
+
+- Wire the real Cal.com URL into `src/lib/site.ts` (`bookingUrl`).
+- Replace `hello@smartcloudsolutions.tech` with the live address once mailbox
+  is provisioned.
+- Optional: add real product screenshots or repo cards to the hero artifact
+  wall as they become available.
