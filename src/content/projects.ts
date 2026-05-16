@@ -91,6 +91,52 @@ export const projects: Project[] = [
     owner: "rohit",
   },
   {
+    slug: "raga-finance",
+    name: "Raga Finance",
+    url: "https://web3cook.com",
+    type: "Protocol",
+    outcome:
+      "Curated on-chain strategy vaults — risk-profiled allocation across Berachain, Hyperliquid, Katana, and Hemi.",
+    evidence:
+      "Curators allocate across auto-compounding, delta-neutral, leverage-looping, and yield-optimizer strategies; a backend oracle handles routing. Cross-chain vaults via LayerZero OVaults.",
+    artifact: {
+      label: "strategy surface",
+      metric: "multi-chain",
+      rows: [
+        "auto-compound (berachain)",
+        "delta-neutral (hyperliquid)",
+        "leverage loop (katana/hemi)",
+        "yield optimizer",
+      ],
+    },
+    meta: ["founder/cto", "live mainnet", "berachain · hyperliquid · katana · hemi"],
+    tags: ["solidity", "berachain", "hyperliquid", "vaults"],
+    owner: "rohit",
+  },
+  {
+    slug: "nexus-network",
+    name: "Nexus Network",
+    url: "https://web3cook.com",
+    type: "Protocol",
+    outcome:
+      "Non-custodial native ETH staking for L2 bridge funds — bridges keep exit liquidity while idle reserves stake.",
+    evidence:
+      "Uses SSV distributed validators to stake bridged ETH; stables route to Aave / MakerDAO. Venture-backed.",
+    artifact: {
+      label: "bridge staking",
+      metric: "non-custodial",
+      rows: [
+        "ssv validators",
+        "aave / makerdao supply",
+        "l2 bridge integration",
+        "exit liquidity preserved",
+      ],
+    },
+    meta: ["founder/cto", "venture-backed", "optimism · polygon cdk · arbitrum orbit"],
+    tags: ["solidity", "ethereum", "ssv", "l2"],
+    owner: "rohit",
+  },
+  {
     slug: "constructive",
     name: "Constructive",
     url: "https://github.com/Anmol1696",

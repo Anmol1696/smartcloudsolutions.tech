@@ -40,15 +40,15 @@ export const operators: Operator[] = [
     slug: "rohit",
     monogram: "ra",
     name: "Rohit Aggarwal",
-    title: "web3 protocols + smart contracts",
+    title: "founder/cto · web3 protocols",
     location: "India",
     blurb:
-      "Designs and ships web3 protocols. 5+ protocols deployed, deep on EVM validator infrastructure, distributed key management, and on-chain payments.",
-    signature: ["ssv-service", "erc20-subscriptions", "movebot"],
+      "Founder/CTO of Raga Finance (on-chain strategy vaults across Berachain, Hyperliquid, Katana, Hemi) and Nexus Network (venture-backed, non-custodial L2 bridge-fund staking via SSV). Previously led EVM at pSTAKE Finance — liquid staking on BNB/Ethereum and cross-chain L2 staking via LayerZero.",
+    signature: ["Raga Finance", "Nexus Network", "pSTAKE EVM", "ssv-service"],
     timeline: [
-      { role: "protocol architect", org: "independent" },
-      { role: "5+ protocols", org: "EVM mainnets" },
-      { role: "6+ hackathon wins", org: "global circuit" },
+      { role: "founder/cto", org: "Raga Finance" },
+      { role: "founder/cto", org: "Nexus Network" },
+      { role: "lead blockchain engineer", org: "pSTAKE · Persistence" },
       { role: "alumnus", org: "IIT Bombay" },
     ],
     links: [
